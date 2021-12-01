@@ -1,0 +1,335 @@
+.PostContainerOuter {
+    display: flex;
+    justify-content: center;
+}
+
+.Post {
+    margin: 40px 10px 25px 10px;
+    box-shadow: 2px 0px 15px 0px #000;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    border: none !important;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.imageContainer {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.imageContainer img {
+    transition: all 1s ease;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    display: block;
+    object-fit: cover;
+}
+
+.PostLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hoverContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.1, 1.1);
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.avatar {
+    margin-right: 10px;
+}
+
+.imageContainer:hover .hoverContent {
+    visibility: visible;
+    opacity: 1;
+} 
+
+.hoverContentStatsContainer,
+.hoverContentDate {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    padding-bottom: 8px;
+    align-items: center;
+}
+
+.hoverContentDate {
+    justify-content: center;
+}
+
+.hoverContentStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoverContentStats,
+.hoverContentStatsContainer p,
+.hoverContentDate p{
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 1px 1px #000;
+    font-weight: bold;
+}   
+
+.hoverContentStats,
+.hoverContentStatsContainer p {
+    font-size: 18px;
+}
+
+.totalCommentsCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoverContentStatsContainer p img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    -webkit-filter: drop-shadow(2px 1px 1px #000) !important;
+    filter: drop-shadow(2px 1px 1px #000) !important;
+}
+
+.hoverContentDate p {
+    font-size: 15px;
+}
+
+
+.modalImageContainer {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.modalImageContainer img {
+    max-width: 90%;
+    max-height: 100vh;
+}
+
+.modalImageContainer button{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    background-color: transparent;
+    border: 1px solid #3e4042;
+    border-radius: 50%;
+    padding: 8px 14px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+.modalImageContainer button:hover{
+    background-color: rgba(255, 255, 255, 0.18)
+}
+
+.modalCommentsContainer {
+    background-color: #242526;
+    overflow-y: auto;
+}
+
+.modalCommentsInfo {
+    height: 5vh;
+    padding: 20px 15px;
+    border-bottom: 1px solid #3e4042;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalCommentsInfoNameAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCommentsInfoNameAvatar span,
+.modalCommentsInfoTimestamp span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modalCommentsInfoTimestamp span {
+    font-size: 12px;
+}
+
+.modalCommentsCaption {
+    min-height: auto;
+}
+
+.modalPostCaption {
+    border-bottom: 1px solid #3e4042;
+    padding: 20px;
+}
+
+.modalPostCaption p{
+    color: #fff;
+    font-size: 14px;
+}
+
+.modalCommentsInputContainer {
+    margin: 20px 20px 20px 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.modalCommentsInputContainer p{
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.modalCommentsInputContainer p button {
+    color: red;
+    cursor: pointer;
+    position: unset;
+    text-transform: capitalize;
+}
+
+.modalCommentsInputContainer p button:hover {
+    color: red;
+}
+
+.modalCommentsInputContainer form{
+    width: 100%;
+    border-bottom: 1px solid #3A3B3C;
+}
+
+.modalCommentsInputContainer input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #e4e6eb;
+    padding: 8px;
+    width: calc(100% - 63px);
+    font-size: 14px;
+}
+
+.modalCommentsInputContainer button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #e4e6eb;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 12px;
+    top: 29%;
+    right: 0%;
+    position: absolute;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modalCommentsInputContainer button:hover{
+    color: #3A3B3C;
+}
+
+.modalCommentsDisplayContainer {
+    padding: 20px 20px 20px 20px;
+}
+
+.modalCommentsDisplayContainerEach {
+    display: flex;
+}
+
+
+.modalComment{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.modalComment p {
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: #3A3B3C;
+    color: #e4e6eb; 
+    border-radius: 10px;
+}
+
+.modalComment p span{
+    font-size: 13px;
+}
+
+.modalComment .modalCommentTmestamp{
+    color: #e4e6eb;
+    font-size: 11px;
+    margin: 0 5px;
+}
+
+.modalComment .commentRemoveBtn, 
+.postRemoveBtn {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 3px;
+    top: -10px;
+    right: -10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.postRemoveBtn {
+    background: rgba(255, 0, 0, 0.9);
+}
+
+.modalComment .commentRemoveBtn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.postRemoveBtn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.modalComment .commentRemoveBtn img,
+.postRemoveBtn img {
+    width: 15px;
+    height: 15px;
+    vertical-align: bottom;
+}
+
+@media only screen and (max-width: 900px) {
+    body{
+        overflow-y: auto !important;
+    }
+
+    .modalCommentsContainer {
+        overflow-y: inherit;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+.MainContent{
+    height: 80vh; 
+    overflow: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+@media only screen and (min-width: 1350px) {
+    .MainContent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1330px) {
+    .MainContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .MainContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .MainContent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

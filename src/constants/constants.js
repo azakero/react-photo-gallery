@@ -1,0 +1,6 @@
+export const MODAL_STATE = 'MODAL_STATE';
+export const GET_USER = 'GET_USER';
+
+
+// export const GET_ALL_QUOTES_SUCCESS = 'GET_ALL_QUOTES_SUCCESS';
+// export const GET_ALL_QUOTES_FAIL = 'GET_ALL_QUOTES_FAIL';

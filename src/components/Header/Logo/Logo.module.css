@@ -1,0 +1,10 @@
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.Logo a {
+    font-size: 38px;
+    font-family: 'Comforter Brush', sans-serif;
+    color: #fff;
+}
