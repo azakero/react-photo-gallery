@@ -4,18 +4,18 @@ import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: '<add-here>',
-    authDomain: '<add-here>',
-    projectId: '<add-here>',
-    storageBucket: '<add-here>',
-    messagingSenderId: '<add-here>',
-    appId: '<add-here>'
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID
 };
 
-const app = initializeApp( firebaseConfig );
+const app = initializeApp(firebaseConfig);
 
-const db      = getFirestore( app );
-const storage = getStorage( app );
-const auth    = getAuth( app );
+const db = getFirestore(app);
+const storage = getStorage(app);
+const auth = getAuth(app);
 
 export { db, storage, auth };
